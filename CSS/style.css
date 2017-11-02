@@ -1,0 +1,298 @@
+.navigation {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.logo {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hamburger-menu {
+    position: absolute;
+    right: 50px;
+    overflow: hidden;
+    display: none;
+    color: #5B6476;    
+}
+
+.nav-menu {
+    list-style: none;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 600;
+    color: #5B6476;
+    padding: 0px;
+    margin-right: 15px;
+}
+
+.nav-menu__item {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-menu__item--without-dec {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    margin-left: 50px;
+    margin-top: 150px;
+}
+
+.text {
+    font-family: "Montserrat";
+     color: #5B6476;
+     font-size: 20px;
+     font-weight: 300;
+     line-height: 30px;
+     margin: 20px 0px 40px 0px;
+}
+
+.text--big-gradient {
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 80px;
+    width: 400px;
+    background: -webkit-linear-gradient(220deg, #75E9FF 0%, #76FFA9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0px;
+    
+}
+
+.text--bold {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 40px 0px 20px 0px; 
+}
+
+.btn {
+    height: 60px;
+    padding: 0px 15px;
+    border: none;
+    border-radius: 100px;
+    background-color: #5B6476;
+    font-family: Montserrat;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+}
+
+.player-container {
+    width: 859px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-image: url(../Assets/Images/CircleImgArrows.png);
+    background-repeat: no-repeat;
+}
+
+.player-controls {
+    position: relative;
+    top: 550px;
+    left: 180px;
+    display: inline-block;
+
+}
+
+.player-controls__btn {
+    width: 60px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 20px 0 rgba(55,59,68,0.23);
+    vertical-align: middle;
+    padding: 0;
+}
+
+.player-controls__btn--icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+}
+
+.player-controls__text {
+    font-family: "Montserrat";
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    display: inline-block;
+    margin-left: 17px;
+}
+
+.btn-mobile {
+    display: none;
+}
+
+@media only screen and (max-width : 1250px) {
+    
+    .navigation {
+        margin-left: 0px;
+        text-align: center;
+        background-color: #FFFFFF;
+    }
+
+    .logo {
+        float: left;
+    }
+
+    .nav-menu {
+        float: right;
+    }
+
+    .nav-menu__item {
+        margin-left: 0px;
+        margin-right: 15px;
+        padding: 10px;
+    }
+
+    .hero {
+        text-align: center;
+        margin-left: 0px;
+        height: 100%; 
+        width: 100%;
+    }
+
+    .text--big-gradient {
+        margin: 50px auto;
+    }
+
+    .player-container {
+        position: relative;
+        float: right;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        max-height: 0;
+        overflow: hidden;
+        margin: 10px 0;
+        position: absolute;
+        right: 30px;
+        top: 40px;
+        transition: max-height 0.25s ease-out;
+        background: rgba(255, 255, 255, .5);
+    }
+
+    .nav-menu--open {
+        max-height: 160px;
+    }
+    
+    .nav-menu__item {
+        text-align: right;
+        padding: 5px;
+        display: block;
+    }
+
+    .player-container {
+        width: 100%;
+        background-position: center;
+        text-align: center;
+    }
+
+    .player-controls {
+        display: none;
+    }
+
+    .btn-mobile {
+        display: inline-block;
+        background: #FFFFFF;
+        position: relative;
+        top: 70%;
+        transform: translateY(-50%);
+    }
+
+    .player-controls__btn--icon {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .btn-mobile--text {
+        display: inline;
+        color: #5B6476;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    
+    .text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .text--big-gradient {
+        font-size: 40px;
+        line-height: 40px;
+        width: 250px;
+    }
+
+    .btn {
+        height: 40px;
+        padding: 0px 10px;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+
+    .player-container {
+        background-image: url(../Assets/Images/ImgMobile.png);
+    }
+
+    .btn-mobile {
+        top: 85%;
+    }
+   
+}
+
+@media only screen and (max-height : 550px) {
+        
+    .hero {
+        height: inherit;
+        margin-bottom: 100px;
+        }
+
+    .text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .text--big-gradient {
+        font-size: 40px;
+        line-height: 40px;
+        width: 250px;
+    }
+
+    .btn {
+        height: 40px;
+        padding: 0px 10px;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+
+    .player-container {
+        background-image: url(../Assets/Images/ImgMobile.png);
+    }
+
+    .btn-mobile {
+        top: 85%;
+    }
+}
